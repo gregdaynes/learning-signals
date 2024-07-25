@@ -1,0 +1,24 @@
+{
+  "name": "learning-signals",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage",
+    "update": "npx npm-check-updates -i --format-group"
+  },
+  "keywords": [],
+  "author": "Gregory Daynes <email@gregdaynes.com> (https://gregdaynes.com)",
+  "license": "ISC",
+  "description": "A demonstration of signals in vanilla javascript.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gregdaynes/learning-signals"
+  },
+  "dependencies": {
+    "neostandard": "^0.11.1"
+  }
+}

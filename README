@@ -1,0 +1,15 @@
+Learning Signals
+================
+
+The goal of this is to demonstrate how signals can be implemented without a framework
+like React, Vue, Solid, etc. 
+
+
+References
+----------
+
+[Implementing Signals from Scratch](https://dev.to/ratiu5/implementing-signals-from-scratch-3e4c)
+[Making Web Components reactive](https://www.horuskol.net/blog/2022-04-12/making-web-components-reactive/)
+[Signals: Fine-grained Reactivity for JavaScript Frameworks](https://www.sitepoint.com/signals-fine-grained-javascript-framework-reactivity/)
+[Obersver Pattern](https://en.wikipedia.org/wiki/Observer_pattern)
+[Deep Dive Into How Signals Work In SolidJS](https://www.thisdot.co/blog/deep-dive-into-how-signals-work-in-solidjs)
