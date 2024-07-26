@@ -1,0 +1,6 @@
+Web Component Example
+=====================
+
+Implements a simple tree of webcomponents that pass the data down to the child components on change. 
+
+This is based on work by [Chris Haynes](https://dev.to/lamplightdev/how-to-pass-data-between-web-components-21c8) 

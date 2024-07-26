@@ -22,4 +22,5 @@ References
 [Obersver Pattern](https://en.wikipedia.org/wiki/Observer_pattern)
 [Deep Dive Into How Signals Work In SolidJS](https://www.thisdot.co/blog/deep-dive-into-how-signals-work-in-solidjs)
 [TC39 Proposal Signals](https://github.com/tc39/proposal-signals)
+[How to pass data between web components](https://dev.to/lamplightdev/how-to-pass-data-between-web-components-21c8)
 [^1]: [Ben Lesh DotJS 2024](https://www.youtube.com/watch?v=txVeRpN_870)

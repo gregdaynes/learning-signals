@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "node --watch examples/01-basic/index.js",
     "dev:web": "live-server --open='examples/02-webpage/index.html'",
+    "dev:component": "live-server --open='examples/03-components/index.html'",
     "test": "node --test",
     "test:coverage": "node --test --experimental-test-coverage",
     "update": "npx npm-check-updates -i --format-group"

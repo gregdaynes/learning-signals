@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Signal Example</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "signal": "../../signal.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <x-container>
+      <x-counter></x-counter>
+      <x-controls>
+        <button name="decrement" value="-1">Decrement</button>
+        <button name="increment" value="1">Increment</button>
+      </x-controls>
+    </x-container>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
