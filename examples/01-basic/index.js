@@ -1,4 +1,4 @@
-import { createEffect, createSignal } from './signal.js'
+import { createEffect, createSignal } from '../../signal.js'
 
 // Setup for the example
 // --------------------------------

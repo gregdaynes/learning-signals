@@ -5,7 +5,7 @@
     <script type="importmap">
       {
         "imports": {
-          "signal": "./signal.js",
+          "signal": "../../signal.js",
         }
       }
     </script>
@@ -17,7 +17,7 @@
     <button name="increment" value="1">Increment</button>
 
     <script type="module">
-      import { createSignal, createEffect } from './signal.js';
+      import { createSignal, createEffect } from '../../signal.js';
 
       const [count, setCount] = createSignal(0);
 

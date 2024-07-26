@@ -1,12 +1,11 @@
 {
   "name": "learning-signals",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "signal.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "node --watch index.js",
-    "dev:web": "live-server",
+    "dev": "node --watch examples/01-basic/index.js",
+    "dev:web": "live-server --open='examples/02-webpage/index.html'",
     "test": "node --test",
     "test:coverage": "node --test --experimental-test-coverage",
     "update": "npx npm-check-updates -i --format-group"
