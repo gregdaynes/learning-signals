@@ -6,6 +6,12 @@ like React, Vue, Solid, etc.
 
 Inspired to learn more about them from Ben Lesh's talk at DotJS 2024[^1].
 
+---
+
+Signals are one way to create a reactive system in JavaScript. The technique is similar to pub/sub or observers, where a registry of listeners is maintained and called when the setter is called.
+
+When the setter is called, the current state is updated, and the listeners are called. State is not passed to the listeners, but the listeners can access the state directly through the defined getter method created from initialization.
+
 
 References
 ----------
