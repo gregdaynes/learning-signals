@@ -2,24 +2,20 @@ export default class XControls extends HTMLElement {
   constructor () {
     super()
 
-    this.querySelector('[name=increment]').addEventListener('click', this.onIncrement)
-    this.querySelector('[name=decrement]').addEventListener('click', this.onDecrement)
+    this.props = {
+      onIncrement: () => { console.log('increment') },
+      onDecrement: () => {},
+    }
 
-    this.onIncrement = this.onIncrement.bind(this)
-    this.onDecrement = this.onDecrement.bind(this)
+    this.querySelector('[name="increment"]').addEventListener('click', this.onIncrement)
+    this.querySelector('[name="decrement"]').addEventListener('click', this.onDecrement)
   }
 
-  onIncrement (event) {
-    this.dispatchEvent(new CustomEvent('x-increment', {
-      bubbles: true,
-      composed: true,
-    }))
+  onIncrement () {
+    this.props.onIncrement()
   }
 
-  onDecrement (event) {
-    this.dispatchEvent(new CustomEvent('x-decrement', {
-      bubbles: true,
-      composed: true,
-    }))
+  onDecrement () {
+    this.props.onDecrement()
   }
 }

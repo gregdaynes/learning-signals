@@ -8,8 +8,9 @@ export default class XCounter extends HTMLElement {
   }
 
   connectedCallback () {
-    // ensure any initial properties set before the component was initialised our passed
-    // through our setters
+    // ensure any initial properties set before the component was 
+    // initialized, are run through the setters. This will trigger
+    // the render method to update the component.
     Object.keys(this.props).forEach((propName) => {
       if (this.hasOwnProperty(propName)) {
         const value = this[propName]
@@ -19,21 +20,19 @@ export default class XCounter extends HTMLElement {
         this[propName] = value
       }
     })
-
-    this.updateChildren()
   }
 
   set value (value) {
     this.props.value = value
 
-    this.updateChildren()
+    this.render()
   }
 
   get value () {
     return this.props.total
   }
 
-  updateChildren () {
+  render () {
     this.innerText = this.props.value
   }
 }

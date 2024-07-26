@@ -1,33 +1,40 @@
+import { createSignal, createEffect } from '../../signal.js'
+
 export default class XContainer extends HTMLElement {
   constructor () {
     super()
 
+    const [value, setValue] = createSignal(0)
+
+    this.counter = this.querySelector('x-counter')
+    this.controls = this.querySelector('x-controls')
+
     this.state = {
-      value: 0,
+      value,
+      setValue,
     }
 
-    this.addEventListener('x-increment', this.onIncrement)
-    this.addEventListener('x-decrement', this.onDecrement)
-    this.addEventListener('x-update-amount', this.onUpdateAmount)
+    createEffect(() => {
+      this.render()
+    })
   }
 
   connectedCallback () {
-    this.updateChildren()
+    this.controls.onIncrement = this.onIncrement.bind(this)
+    this.controls.onDecrement = this.onDecrement.bind(this)
+
+    this.render()
   }
 
   onDecrement (event) {
-    this.state.value = this.state.value - 1
-
-    this.updateChildren()
+    this.state.setValue(this.state.value() - 1)
   }
 
   onIncrement (event) {
-    this.state.value = this.state.value + 1
-
-    this.updateChildren()
+    this.state.setValue(this.state.value() + 1)
   }
 
-  updateChildren () {
-    this.querySelector('x-counter').value = this.state.value
+  render () {
+    this.counter.value = this.state.value()
   }
 }
