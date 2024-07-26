@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Signal Example</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "signal": "./signal.js",
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Signal Example</h1>
+    <p>Count: <span id="count">0</span></p>
+    <button name="decrement" value="-1">Decrement</button>
+    <button name="increment" value="1">Increment</button>
+
+    <script type="module">
+      import { createSignal, createEffect } from './signal.js';
+
+      const [count, setCount] = createSignal(0);
+
+      createEffect(() => {
+        console.log('count:', count());
+        document.getElementById('count').textContent = count();
+      });
+
+      document.querySelector('button[name="increment"]').addEventListener('click', ({ target }) => {
+        setCount(count() + Number(target.getAttribute('value')));
+      });
+
+      document.querySelector('button[name="decrement"]').addEventListener('click', ({ target }) => {
+        setCount(count() + Number(target.getAttribute('value')));
+      });
+    </script>
+  </body>
+</html>

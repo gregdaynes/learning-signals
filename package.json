@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch index.js",
+    "dev:web": "live-server",
     "test": "node --test",
     "test:coverage": "node --test --experimental-test-coverage",
     "update": "npx npm-check-updates -i --format-group"
@@ -18,7 +19,8 @@
     "type": "git",
     "url": "https://github.com/gregdaynes/learning-signals"
   },
-  "dependencies": {
+  "devDependencies": {
+    "live-server": "^1.2.2",
     "neostandard": "^0.11.1"
   }
 }
