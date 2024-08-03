@@ -12,6 +12,9 @@ Signals are one way to create a reactive system in JavaScript. The technique is 
 
 When the setter is called, the current state is updated, and the listeners are called. State is not passed to the listeners, but the listeners can access the state directly through the defined getter method created from initialization.
 
+---
+
+Preact has a signals module with a clean API. It is a good reference to understand how signals can be implemented. The local file `preact-signals.js` is my attempt to implement a matching API. Tests are found in `preact-signals.test.js`.
 
 References
 ----------
@@ -23,4 +26,8 @@ References
 [Deep Dive Into How Signals Work In SolidJS](https://www.thisdot.co/blog/deep-dive-into-how-signals-work-in-solidjs)
 [TC39 Proposal Signals](https://github.com/tc39/proposal-signals)
 [How to pass data between web components](https://dev.to/lamplightdev/how-to-pass-data-between-web-components-21c8)
+[Preact - Introducing Signals](https://preactjs.com/blog/introducing-signals/)
+[Preact - Signals Documentation](https://preactjs.com/guide/v10/signals/)
+[Preact - Signals Module](https://github.com/preactjs/signals)
+
 [^1]: [Ben Lesh DotJS 2024](https://www.youtube.com/watch?v=txVeRpN_870)
